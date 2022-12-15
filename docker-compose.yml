@@ -1,0 +1,11 @@
+version: '3'
+services:
+    workspce:
+        build:
+            context: ./docker
+            dockerfile: Dockerfile
+        ports:
+            - '7860:7860'
+        volumes:
+            - './:/home/webui/app'
+        tty: true
